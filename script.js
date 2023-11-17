@@ -1,22 +1,18 @@
-let ans = [];
-
 function stringChop(str, size) {
   // your code here
-	if(str==='' || str===null){
-	return [];
-  }
-  for (let i = 0; i < str.length; i += size) {
-    slice(str, i, i + size);
+	if (str === null) {
+    return [];
   }
 
-  return ans;
-}
+  const chunks = [];
+  let i = 0;
 
-function slice(str, start, end) {
-  let sliced = str.slice(start, end);
-  ans.push(sliced);
-}
+  while (i < str.length) {
+    chunks.push(str.slice(i, i + size));
+    i += size;
+  }
 
+  return chunks;
 }
 
 // Do not change the code below
